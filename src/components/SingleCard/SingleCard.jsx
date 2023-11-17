@@ -5,12 +5,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from "@mui/material/Button";
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { DEFAULT_IMAGE } from '../../constants/constants';
 
  function SingleCard({
     id,
     name,
     time,
-    image
+    image=DEFAULT_IMAGE
  }) {
 
     const handleClick = (id) =>{

@@ -1,0 +1,1 @@
+export const DEFAULT_IMAGE = 'https://t3.ftcdn.net/jpg/05/90/75/40/360_F_590754013_CoFRYEcAmLREfB3k8vjzuyStsDbMAnqC.jpg';

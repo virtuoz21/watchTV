@@ -3,6 +3,7 @@ import Navigation from './components/Navigation/navigations';
 import React from 'react';
 import SingleCard from './components/SingleCard/SingleCard';
 import Grid from "@mui/material/Grid";
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 
@@ -48,6 +49,7 @@ function App() {
       </Grid>
       ))}
       </Grid>
+      <Footer/>
     </div>
   );
 }
