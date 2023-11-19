@@ -4,14 +4,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from "@mui/material/Button";
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { DEFAULT_IMAGE } from '../../constants/constants';
+// import { CardActionArea } from '@mui/material';
+import CardActionArea from '@mui/material/CardActionArea';
+import '../../singleCard.css'
 
  function SingleCard({
     id,
     name,
     time,
-    image=DEFAULT_IMAGE
+    image
  }) {
 
     const handleClick = (id) =>{
@@ -32,7 +33,7 @@ import { DEFAULT_IMAGE } from '../../constants/constants';
         image={image}
         alt="Image"
       />
-      <Card
+      <Card className='card'
         sx={{
           maxWidth: 345,
           background: `linear-gradient(
@@ -59,21 +60,11 @@ import { DEFAULT_IMAGE } from '../../constants/constants';
             {time}
           </Typography>
         </CardContent>
-        <div>
-          <Button onClick={() => handleClick(id)}
-            sx={{
-              border: "1px solid #E50914",
-              background: "#E50914",
-              width: "100px",
-              height: "30px",
-              color: "#fff",
-              fontSize:'0.7rem',
-              marginLeft:'15px',
-              borderRadius:'0'
-            }}
-          >
+
+        <div className='btn'
+           onClick={() => handleClick(id)}
+            >
             Show More
-          </Button>
         </div>
       </Card>
     </CardActionArea>
