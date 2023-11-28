@@ -15,7 +15,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Icon from '../../images/logo.png';
 
 
-
 const pages = ['Home', 'TV shows', 'About us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
