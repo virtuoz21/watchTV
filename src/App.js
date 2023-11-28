@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-
 const mockData = [
   {
     id: 1, 
