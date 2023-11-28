@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import Navigation from './components/Navigation/navigations';
+import Navigation from './components/Navigation/Navigations';
 import React from 'react';
 import SingleCard from './components/SingleCard/SingleCard';
 import Grid from "@mui/material/Grid";
