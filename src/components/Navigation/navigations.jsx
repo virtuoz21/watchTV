@@ -13,6 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Icon from '../../images/logo.png';
+import { NavLink } from 'react-router-dom';
+import { MENU } from '../../constants/constants';
+import './navigations.css';
 
 
 const pages = ['Home', 'TV shows', 'About us'];
@@ -115,15 +118,17 @@ function Navigation() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'center', marginLeft:'-10rem' }}}>
+            {MENU.map(({ name, link }, index) => (
+              <NavLink
+              key={index}
+              className={({ isActive }) =>
+              `navLink ${isActive ? "isActive" : ''}`
+            }
+            to={link}
+            >
+              {name}
+            </NavLink>
             ))}
           </Box>
 

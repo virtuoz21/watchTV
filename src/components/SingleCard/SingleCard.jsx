@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { DEFAULT_IMAGE } from '../../constants/constants';
 import './singleCard.css'
+import { Link } from 'react-router-dom';
 
  const cardStyle = {
       maxWidth: 345,
@@ -63,11 +64,11 @@ function SingleCard({
           </Typography>
         </CardContent>
 
-        <div className='btn'
-           onClick={() => handleClick()}
+        <Link className='btn'
+           to={`/tvshows/${id}`}
             >
             Show More
-        </div>
+        </Link>
       </Card>
     </CardActionArea>
     </Card>
