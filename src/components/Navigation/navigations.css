@@ -9,3 +9,10 @@
 .isActive{
     color: red;
 }
+
+.menuBar{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+}

@@ -11,6 +11,7 @@
   import TvShows from './pages/TVShows';
   import NotFound from './pages/NotFound';
   import FilmDetails from './pages/FilmDetails';
+  import SingleItemHeader from './components/SingleItemHeader/SingleItemHeader';
 
   const router = createBrowserRouter([
     {
@@ -27,8 +28,12 @@
           element:<TvShows/>
         },
         {
-          path:"/tvshows/:filmId",
+          path:"/show/:filmId",
           element:<FilmDetails/>
+        },
+        {
+        path:"/tvshows/:id",
+        element:<SingleItemHeader/>
         }
       ]
     }

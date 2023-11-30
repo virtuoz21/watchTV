@@ -34,9 +34,7 @@ function SingleCard({
     image = DEFAULT_IMAGE,
  }) {
 
-    const handleClick = () =>{
-        console.log(`Film id:${id}`)
-    }
+    
   return (
     <Card
       sx={{maxWidth: 345,}}
@@ -65,7 +63,7 @@ function SingleCard({
         </CardContent>
 
         <Link className='btn'
-           to={`/tvshows/${id}`}
+           to={`/show/${id}`}
             >
             Show More
         </Link>
