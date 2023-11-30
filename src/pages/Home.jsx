@@ -1,18 +1,18 @@
 import { useEffect, useState, useRef } from 'react';
-// import  Navigation  from '../components/Navigation/Navigation';
 import SingleCard from '../components/SingleCard/SingleCard';
 import Grid from "@mui/material/Grid";
-import axios from 'axios';
 import useRequest from '../hooks/useRequest';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearch } from '../store/SearchSlice';
+import { DEFAULT_IMAGE } from '../constants/constants';
 
 const inputStyle = {
     color:'white',
     backgroundColor:'rgba(209, 208, 207,.6)',
     height:'30px',
     border:'none',
-    width:'20rem',
+    width:'25rem',
+    
 }
 
 function Home () {
@@ -46,6 +46,7 @@ function Home () {
         paddingTop: '20px', 
         paddingBottom:'3rem'}}>
         <input 
+        placeholder='Search' 
         type='text'
         style={inputStyle} 
         value={apiSearch} 
@@ -55,14 +56,14 @@ function Home () {
       </Grid>
      
       <Grid container spacing={2} sx={{padding:"15px"}}>
-     {apiData.map(({id, name, genre, image, premiered,}, index) => (
+     {apiData.map(({id, name, genres, image, premiered}, index) => (
       <Grid item xs={3} key={index}>
       <SingleCard
         id={id}
         name={name} 
         time={premiered}
-        genre={genre}
-        image={image ? image.medium || "" : ""}
+        genre={genres}
+        image={image ? image.medium || DEFAULT_IMAGE : DEFAULT_IMAGE}
         onClick={handleCardClick} 
       />
       </Grid>

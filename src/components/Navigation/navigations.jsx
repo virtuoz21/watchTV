@@ -11,9 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Icon from '../../images/logo.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { MENU } from '../../constants/constants';
 import './navigations.css';
 
@@ -60,7 +59,16 @@ function Navigation() {
               textDecoration: 'none',
             }}
           >
-            <img src={Icon} alt='Icon' width='200' height='50' />
+              <Link to={`/`}> 
+                <img 
+                  src={Icon} 
+                  alt='Icon' 
+                  width='200' 
+                  height='50' 
+                /> 
+              </Link>
+              
+             
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -92,14 +100,14 @@ function Navigation() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {MENU.map(({name, link}, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center"><NavLink className='menuBar' to={link}>{name}</NavLink></Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -116,9 +124,9 @@ function Navigation() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img src={Icon} alt="Icon"  width='200' height='50' />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'center', marginLeft:'-10rem' }}}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'center', marginRight:'10.5rem' }}}>
             {MENU.map(({ name, link }, index) => (
               <NavLink
               key={index}
