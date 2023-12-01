@@ -1,0 +1,16 @@
+.label{
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D12E27;
+    border-radius: 6px; 
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: black; 
+  }

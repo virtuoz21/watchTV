@@ -31,10 +31,10 @@
           path:"/show/:filmId",
           element:<FilmDetails/>
         },
-        {
-        path:"/tvshows/:id",
-        element:<SingleItemHeader/>
-        }
+        // {
+        // path:"/tvshows/:id",
+        // element:<SingleItemHeader/>
+        // }
       ]
     }
   ])
