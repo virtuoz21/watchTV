@@ -2,11 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import SingleItemHeader from "../components/SingleItemHeader/SingleItemHeader";
+import SingleItemTabs from "../components/singleItemTabs/SingleItemTabs";
+
+
+
 
 
 function FilmDetails() {
     const { filmId } = useParams();
     const [filmData, setFilmData] = useState(null);
+    const [activeTab, setActiveTab] = useState(0);
     console.log(filmData)
     useEffect(() => {
         async function fetchFilmData() {
@@ -39,7 +44,9 @@ function FilmDetails() {
         views
       } = filmData;
     
-
+      const handleChangeTab = (event, newValue) => {
+        setActiveTab(newValue);
+      };
     
       return (
         <>
@@ -52,6 +59,12 @@ function FilmDetails() {
             image={image}
             summary={summary}
             views={views}
+          />
+            <SingleItemTabs
+              summary={summary}
+              status={status}
+              genres={genres}
+              series={series}
           />
         </>
       );

@@ -46,7 +46,7 @@ function Home () {
         paddingTop: '20px', 
         paddingBottom:'3rem'}}>
         <input 
-        placeholder='Search' 
+        placeholder='Search...' 
         type='text'
         style={inputStyle} 
         value={apiSearch} 
