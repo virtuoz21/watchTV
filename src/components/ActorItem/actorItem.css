@@ -1,0 +1,83 @@
+.Tag{
+    color: #fff;
+    text-transform: uppercase;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.Tag h1{
+    background: linear-gradient(45deg, #fff, #e78682, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 10s ease infinite;
+}
+
+/* @keyframes gradient {
+    0% {
+        background-position: 0 50%;
+      }
+    
+      50% {
+        background-position: 100% 50%;
+      }
+    
+      100% {
+        background-position: 50% 100%;
+      }
+} */
+
+.actor_card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 25rem;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+    gap: 1rem;
+    background-color: #313131;
+    padding: 20px;
+    border-radius: 1%;
+}
+
+.actor_info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.actor_card button{
+position: absolute;
+cursor: pointer;
+left:340px;
+top: 240px;
+height: 30px;
+background-color: #D12E27;
+border: none;
+color:#fff;
+border-radius: 5%;
+}
+
+.actor_card button:hover{
+    background-color: transparent;
+    border: 1px solid #D12E27;
+}
+
+.actor_image img{
+    border-radius: 20%;
+    height: 15rem;
+    width: 11rem;
+}
+
+.As::before{
+    content: "As ";
+  color: #D12E27;
+}
+

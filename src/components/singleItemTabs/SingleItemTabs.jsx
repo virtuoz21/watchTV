@@ -76,7 +76,8 @@ function a11yProps(index) {
               dangerouslySetInnerHTML={{ __html: summary }}
               style={{
                 color: "white",
-                fontSize:'1.1rem'
+                fontSize:'1.1rem',
+                textAlign:'justify',
               }}
             />
       </CustomTabPanel>
