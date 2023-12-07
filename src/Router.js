@@ -32,6 +32,10 @@
           element:<FilmDetails/>
         },
         // {
+        // //   path:"/show",
+        // //   element:<FilmDetails/>
+        // // }
+        // {
         // path:"/tvshows/:id",
         // element:<SingleItemHeader/>
         // }

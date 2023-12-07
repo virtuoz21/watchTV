@@ -10,9 +10,6 @@ function useRequest (search) {
             const response = await axios.get(`https://dolphin-app-pc6ii.ondigitalocean.app/article?q=${search}`);
             setApiData(response.data);
           }
-          if(search.length === 0){
-            setApiData([]);
-          }
           }catch(error){
             console.error(error);
           }

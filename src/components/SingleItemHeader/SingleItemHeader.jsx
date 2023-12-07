@@ -17,7 +17,6 @@ function SingleItemHeader({
   image}) {
    
     return (
-      
       <div className="itemHeader">
         <div className="Title">
             <h1>{name}</h1>
@@ -69,15 +68,21 @@ function SingleItemHeader({
             <span>{genres.join(', ')}</span>  
         </div>
         <div className='image'>
-        <img src={image ? image.medium || DEFAULT_IMAGE : DEFAULT_IMAGE} 
-        alt={name}
-        style={image ? {} : { marginLeft:'-10rem'}}
-        />
+        {image && (
+          <img
+            src={image.medium || DEFAULT_IMAGE}
+            alt={name}
+          />
+        )}
+        {!image && (
+          <img
+            src={DEFAULT_IMAGE}
+            alt={name}
+            style={{ marginLeft: '-30px', width:'20rem', height:'350px'}}
+         />
+        )}
       </div>
       </div>
-
-      
-    
     );
     }
 

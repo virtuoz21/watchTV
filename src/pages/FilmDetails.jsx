@@ -18,7 +18,8 @@ function FilmDetails() {
         const response = await axios.get(
           `https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}`
         );
-        setFilmData(response.data);
+        const newFilmData = response.data;
+        setFilmData(newFilmData);
       } catch (error) {
         console.error(error);
       }

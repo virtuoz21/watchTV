@@ -15,10 +15,6 @@ const GridStyle = {
 function ActorComponent() {
   const { actorData } = useActorRequest();
 
-  // React.useEffect(() => {
-  //   console.log("Actor Data:", actorData);
-  // }, [actorData]);
-
   const processedActorData = [];
 
   actorData.forEach((actor) => {
@@ -44,11 +40,11 @@ function ActorComponent() {
 
   return (
     <>
-    {actorData.length > 0 && (
-    <div className="Tag">
+    {actorData.length > 0 ? (
+      <> 
+      <div className="Tag">
       <h1>Starring</h1>
     </div>
-  )}
     <Grid container spacing={1} sx={GridStyle}>
       {processedActorData.map((actor) => (
         <Grid item xs={4} key={actor.person.id}>
@@ -68,6 +64,8 @@ function ActorComponent() {
         </Grid>
       ))}
     </Grid>
+    </>
+    ) : <> </>}
     </>
   );
 }

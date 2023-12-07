@@ -19,9 +19,7 @@ function useActorRequest() {
       } catch (error) {
         console.error(error);
         setError(error);
-      } finally {
-        setLoading(false);
-      }
+      } 
     }
 
     makeRequest();
