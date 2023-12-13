@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import SingleItemHeader from "../components/SingleItemHeader/SingleItemHeader";
-import SingleItemTabs from "../components/SingleItemTabs/SingleItemTabs";
+import SingleItemTabs from "../components/singleItemTabs/SingleItemTabs";
 import ActorItem from "../components/ActorItem/ActorItem";
 import useActorRequest from "../hooks/useRequestActor";
 
