@@ -1,0 +1,8 @@
+span.starring::before{
+    content: 'Starring:';
+    color: red;
+}
+
+span.starring{
+    font-size: 1rem;
+}

@@ -6,8 +6,8 @@ export const MENU = [
         link: '/home',
     },
     {
-        name: 'tv shows',
-        link: '/tvshows',
+        name: 'shows',
+        link: '/shows',
     },
     {
         name: 'about us',

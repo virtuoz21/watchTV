@@ -2,6 +2,7 @@ import React from "react";
 import useActorRequest from "../../hooks/useRequestActor";
 import { Grid } from "@mui/material";
 import { DEFAULT_ACTOR_IMAGE } from "../../constants/constants";
+import { Link } from "react-router-dom";
 import './actorItem.css';
 
 const GridStyle = {
@@ -9,7 +10,8 @@ const GridStyle = {
   overflowY: 'auto',
   WebkitOverflowScrolling: 'touch',
   maxHeight: '400px',
-  '&::-webkit-scrollbar': { display: 'none' }
+  '&::-webkit-scrollbar': { display: 'none' },
+  marginBottom: '50px'
 };
 
 function ActorComponent() {
@@ -34,10 +36,6 @@ function ActorComponent() {
     }
   });
 
-  const handleShowMore = (actor) => {
-    window.open(actor.person.url, "_blank");
-  };
-
   return (
     <>
     {actorData.length > 0 ? (
@@ -59,7 +57,11 @@ function ActorComponent() {
               <span>{actor.person.name}</span>
               <span className="As">{actor.characterNames?.join(", ")}</span>
             </div>
-            <button onClick={() => handleShowMore(actor)}>Show More</button>
+            <Link className='actor_btn'
+           to={`/actor/${actor.person.id}`}
+            >
+            Show More
+        </Link>
           </div>
         </Grid>
       ))}

@@ -45,7 +45,6 @@ function SingleCard({
           width: "395px",
           height: "222px",
           position: "relative",
-         
         }}
         image={image}
         alt="Image"
@@ -54,10 +53,10 @@ function SingleCard({
         sx={cardStyle}
       >
         <CardContent>
-          <Typography variant="h5" color= "white">
+          <Typography variant="h5" sx={{color: "white", fontSize:"1.5rem"}}>
             {name}
           </Typography>
-          <Typography variant="subtitle1" color="white">
+          <Typography variant="subtitle1" sx={{color: "white", fontSize:"1rem"}}>
             {time}
           </Typography>
         </CardContent>
