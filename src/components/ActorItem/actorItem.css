@@ -16,20 +16,6 @@
   animation: gradient 10s ease infinite;
 }
 
-/* @keyframes gradient {
-    0% {
-        background-position: 0 50%;
-      }
-    
-      50% {
-        background-position: 100% 50%;
-      }
-    
-      100% {
-        background-position: 50% 100%;
-      }
-} */
-
 .actor_card{
     position: relative;
     display: flex;
@@ -53,19 +39,24 @@
     font-size: 1.1rem;
 }
 
-.actor_card button{
+.actor_btn{
 position: absolute;
+text-decoration: none;
+text-align: center;
+font-size: 0.7rem;
+line-height: 30px;
 cursor: pointer;
-left:340px;
+left:320px;
 top: 240px;
 height: 30px;
+width: 100px;
 background-color: #D12E27;
 border: none;
 color:#fff;
 border-radius: 5%;
 }
 
-.actor_card button:hover{
+.actor_btn:hover{
     background-color: transparent;
     border: 1px solid #D12E27;
 }

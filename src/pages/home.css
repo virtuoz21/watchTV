@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
+.title{
+   color: #FF002E;
+   /* font-family: 'Dhurjati'; */
+   text-transform: uppercase;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+   padding: 10px;
+   border-radius: 10%;
+   
+}

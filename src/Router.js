@@ -5,8 +5,9 @@
   import TvShows from './pages/TVShows';
   import NotFound from './pages/NotFound';
   import FilmDetails from './pages/FilmDetails';
-import Auth from './layout/Auth';
-import Register from './pages/Auth/Register';
+  import Auth from './layout/Auth';
+  import Register from './pages/Auth/Register';
+  import ActorInfo from './pages/ActorInfo';
  
 
   const router = createBrowserRouter([
@@ -20,13 +21,17 @@ import Register from './pages/Auth/Register';
           element:<Home/>,
         },
         {
-          path:"/tvshows",
+          path:"/shows",
           element:<TvShows/>
         },
         {
           path:"/show/:filmId",
           element:<FilmDetails/>
         },
+        {
+          path:"/actor/:id",
+          element:<ActorInfo/>
+        }
       ]
     },
     {
@@ -38,14 +43,6 @@ import Register from './pages/Auth/Register';
           path:"register",
           element:<Register/>,
         },
-        // {
-        //   path:"/tvshows",
-        //   element:<TvShows/>
-        // },
-        // {
-        //   path:"/show/:filmId",
-        //   element:<FilmDetails/>
-        // },
       ]
     }
   ])
