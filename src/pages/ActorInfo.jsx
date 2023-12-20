@@ -68,7 +68,7 @@ function ActorInfo() {
           >
             {actorData.name || 'Unknown'}
           </h1>
-          <p>Bio</p>
+          <p>{actorData.summary}</p>
           <hr />
           <h1 className="acting">Acting in</h1>
           <div className="carousel_acting">

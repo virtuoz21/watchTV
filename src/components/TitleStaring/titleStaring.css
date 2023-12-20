@@ -1,5 +1,5 @@
 span.starring::before{
-    content: 'Starring:';
+    content: 'Starring: ';
     color: red;
 }
 
