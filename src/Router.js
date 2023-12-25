@@ -8,6 +8,7 @@
   import Auth from './layout/Auth';
   import Register from './pages/Auth/Register';
   import ActorInfo from './pages/ActorInfo';
+  import AboutUs from './pages/AboutUs';
  
 
   const router = createBrowserRouter([
@@ -23,6 +24,14 @@
         {
           path:"/shows",
           element:<TvShows/>
+        },
+        {
+          path:'/shows/:genre',
+          element:<TvShows/>
+        },
+        {
+          path:'/aboutus',
+          element:<AboutUs/>
         },
         {
           path:"/show/:filmId",
