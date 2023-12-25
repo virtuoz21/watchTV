@@ -14,12 +14,14 @@ function useActorRequest() {
       setError(null);
 
       try {
-        const response = await axios.get(`https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}/cast`);
+        const response = await axios.get(
+          `http://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}/cast`
+        );
         setActorData(response.data);
       } catch (error) {
         console.error(error);
         setError(error);
-      } 
+      }
     }
 
     makeRequest();

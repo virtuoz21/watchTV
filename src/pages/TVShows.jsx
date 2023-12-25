@@ -70,7 +70,7 @@ const MovieSearch = () => {
 
     setLoadingMovies(true);
 
-    const apiUrl = `https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/${genre}`;
+    const apiUrl = `http://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/${genre}`;
 
     fetch(apiUrl)
       .then((response) => response.json())

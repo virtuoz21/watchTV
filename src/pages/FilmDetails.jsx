@@ -10,13 +10,13 @@ function FilmDetails() {
   const { filmId } = useParams();
   const [filmData, setFilmData] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
-  const { actorData } = useActorRequest(); 
+  const { actorData } = useActorRequest();
 
   useEffect(() => {
     async function fetchFilmData() {
       try {
         const response = await axios.get(
-          `https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}`
+          `http://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}`
         );
         const newFilmData = response.data;
         setFilmData(newFilmData);
@@ -41,7 +41,7 @@ function FilmDetails() {
     summary,
     status,
     series,
-    views
+    views,
   } = filmData;
 
   // const handleChangeTab = (event, newValue) => {

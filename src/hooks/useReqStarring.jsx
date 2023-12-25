@@ -6,7 +6,6 @@ function useReqStarring(filmId) {
   const [actorData, setActorData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
 
   useEffect(() => {
     async function makeRequest() {
@@ -14,12 +13,14 @@ function useReqStarring(filmId) {
       setError(null);
 
       try {
-        const response = await axios.get(`https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId?.id}/cast`);
+        const response = await axios.get(
+          `http://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId?.id}/cast`
+        );
         setActorData(response.data);
       } catch (error) {
         console.error(error);
         setError(error);
-      } 
+      }
     }
 
     makeRequest();
