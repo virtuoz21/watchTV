@@ -8,7 +8,7 @@ function useRequest(search) {
       try {
         if (search.length >= 3) {
           const response = await axios.get(
-            `http://dolphin-app-pc6ii.ondigitalocean.app/article?q=${search}`
+            `https://dolphin-app-pc6ii.ondigitalocean.app/article?q=${search}`
           );
           setApiData(response.data);
         }

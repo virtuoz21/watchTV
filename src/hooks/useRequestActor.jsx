@@ -15,7 +15,7 @@ function useActorRequest() {
 
       try {
         const response = await axios.get(
-          `http://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}/cast`
+          `https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}/cast`
         );
         setActorData(response.data);
       } catch (error) {

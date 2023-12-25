@@ -28,7 +28,7 @@ const CardActionStyle = {
 
 function TitleSingleSlide() {
   const popular = useReqGenre(
-    "http://dolphin-app-pc6ii.ondigitalocean.app/article/popular"
+    "https://dolphin-app-pc6ii.ondigitalocean.app/article/popular"
   );
 
   return (

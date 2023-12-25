@@ -25,10 +25,10 @@ function Home() {
   const [selectedFilm, setSelectedFilm] = useState(null);
 
   const actionFilms = useReqGenre(
-    "http://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Action"
+    "https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Action"
   );
   const comedyFilms = useReqGenre(
-    "http://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Comedy"
+    "https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Comedy"
   );
 
   const apiSearch = useSelector((state) => state.search.search);
