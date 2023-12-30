@@ -206,7 +206,6 @@ function Profile() {
             >
               Reload
             </Button>
-            <span>☝</span>
             <p>Click to update your details</p>
           </div>
         </div>
