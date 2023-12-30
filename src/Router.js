@@ -9,6 +9,8 @@
   import Register from './pages/Auth/Register';
   import ActorInfo from './pages/ActorInfo';
   import AboutUs from './pages/AboutUs';
+  import Profile from './pages/Auth/Profile';
+  import PrivateRoute from './components/PrivateRoute/PrivateRoute';
  
 
   const router = createBrowserRouter([
@@ -19,11 +21,11 @@
       children:[
         {
           path:"/home",
-          element:<Home/>,
+          element:<PrivateRoute><Home/></PrivateRoute>,
         },
         {
           path:"/shows",
-          element:<TvShows/>
+          element:<PrivateRoute><TvShows/></PrivateRoute>,
         },
         {
           path:'/shows/:genre',
@@ -40,7 +42,11 @@
         {
           path:"/actor/:id",
           element:<ActorInfo/>
-        }
+        },
+        {
+        path:"/profile",
+        element:<Profile/>
+       }
       ]
     },
     {
