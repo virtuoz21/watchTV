@@ -12,5 +12,5 @@ export const MENU = [
     {
         name: 'about us',
         link: '/aboutus', 
-    },
+    }
 ]

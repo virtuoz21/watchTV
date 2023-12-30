@@ -16,3 +16,15 @@
     color: black;
     font-weight: 400;
 }
+
+.navLink2{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid #E6022A;
+    border-radius: 5%;
+    padding: 10px;
+    cursor: pointer;
+}
+

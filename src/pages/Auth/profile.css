@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+
+.main-profile{
+    border: 2px solid white;
+    padding: 15px;
+    
+}
+
+.Tag-profile {
+    font-family: 'Rubik Scribble';
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  .avatar-prifile-input{
+    color: white;
+  }
+
+  .avatar-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.reload-container{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reload-container p{
+    color: white;
+    margin-top: 5px;
+}
+
+.reload-container span{
+    font-size: 2rem;
+}
